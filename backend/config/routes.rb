@@ -21,28 +21,24 @@ Rails.application.routes.draw do
     resources :branches
   end
 
-  # scope module: "homes" do
-  #   root "homepages#index"
-  #   get ":product_type_id/:id", to: "products#show", as: "product"
-  # end
-
-  # scope module: "users" do
-  #   devise_scope :user do
-  #     get "dang-nhap", to: "sessions#new", as: "login"
-  #     get "dang-xuat", to: "sessions#destroy", as: "logout"
-  #     get "dang-ky", to: "registrations#new", as: "register"
-  #     get "quen-mat-khau", to: "passwords#new", as: "forgot_password"
-  #   end
-  #   get "trang-ca-nhan", to: "dashboards#index", as: "dashboard"
-  #   get "thay-doi-thong-tin", to: "profiles#show", as: "show_profile"
-  #   put "thay-doi-thong-tin", to: "profiles#update", as: "update_profile"
-  #   get "tao-moi-tin-rao", to: "products#new", as: "new_product"
-  #   get "quan-ly-tin-rao", to: "products#index", as: "products"
-  #   resources :products do
-  #     collection do
-  #       get "load_data"
-  #     end
-  #   end
-  #   resources :provinces
-  # end
+  scope module: "homes" do
+    root "home_pages#index"
+    devise_scope :user do
+      get "dang-nhap", to: "sessions#new", as: "login"
+      get "dang-xuat", to: "sessions#destroy", as: "logout"
+      get "dang-ky", to: "registrations#new", as: "register"
+      get "quen-mat-khau", to: "passwords#new", as: "forgot_password"
+    end
+    get "trang-ca-nhan", to: "dashboards#index", as: "dashboard"
+    get "thay-doi-thong-tin", to: "profiles#show", as: "show_profile"
+    put "thay-doi-thong-tin", to: "profiles#update", as: "update_profile"
+    get "tao-moi-tin-rao", to: "products#new", as: "new_product"
+    get "quan-ly-tin-rao", to: "products#index", as: "products"
+    resources :products do
+      collection do
+        get "load_data"
+      end
+    end
+    resources :provinces
+  end
 end

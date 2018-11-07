@@ -1,0 +1,2 @@
+module Homes::HomePagesHelper
+end
