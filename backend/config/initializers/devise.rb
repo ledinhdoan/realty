@@ -8,7 +8,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'acc738dbff721d99656bf6a2c8c7ffa1bf39881e72f52f8c2752b42e8856225ae42a65458b394261af9dd380d283258ac8d8f74dbe1134a71164815d45b09f7e'
+  # config.secret_key = '6931fc91d03c296236251bd738252996276a7109e6e3147af81d49c613e78c1ce25174f4a0ffa1c577b65369599753e7db8f9ee09729bd247dae915a8d92ad35'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -73,7 +73,7 @@ Devise.setup do |config|
   # config.http_authenticatable = false
 
   # If 401 status code should be returned for AJAX requests. True by default.
-  config.http_authenticatable_on_xhr = true
+  # config.http_authenticatable_on_xhr = true
 
   # The realm used in Http Basic Authentication. 'Application' by default.
   # config.http_authentication_realm = 'Application'
@@ -114,7 +114,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = 'b2058f86a4a4a9619f00e2bd56348859b6e7a74da3778d1647863c983a0f17b60c5eda99b2b92d89b264ec552111e681f1eaac0559f46f66f492ec9a577ae0c1'
+  # config.pepper = '1af1437d71c3cb1e1910e4937bb71339c8b3d04bd2fbab9d094650d8e000cd7b84e62603b1923d7bbc9b65dd177c81aa2ca6f958b00b180f4dfaac34857cdd7e'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -229,7 +229,7 @@ Devise.setup do |config|
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
   # "users/sessions/new". It's turned off by default because it's slower if you
   # are using only default views.
-  config.scoped_views = true
+  # config.scoped_views = false
 
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).
@@ -280,4 +280,11 @@ Devise.setup do |config|
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
+
+  # ==> Turbolinks configuration
+  # If your app is using Turbolinks, Turbolinks::Controller needs to be included to make redirection work correctly:
+  #
+  # ActiveSupport.on_load(:devise_failure_app) do
+  #   include Turbolinks::Controller
+  # end
 end

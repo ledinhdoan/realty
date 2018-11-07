@@ -1,5 +1,5 @@
 vi:
-  users:
+  admins:
     registrations:
       new:
         title: "Đăng kí tài khoản"
@@ -10,7 +10,10 @@ vi:
       new:
         btn: "Đăng nhập"
         title: "Đăng nhập"
+        description: "Vui lòng đăng nhập bằng tài khoản và mật khẩu được quản lý cung cấp!"
+        remember_me: "Ghi nhớ tôi"
         not_have_account: "Chưa có tài khoản?"
+        forgot_password: "Quên mật khẩu?"
     passwords:
       new:
         btn: "Xác nhận"
@@ -27,54 +30,34 @@ vi:
       male: "Nam"
       female: "Nữ"
       undefined: "Khác"
-  admins:
-    passwords:
+    providers:
+      show:
+        load_data_success: "Tải nhà cung cấp thành công"
+      index:
+        load_data_success: "Tải danh sách nhà cung cấp thành công"
       create:
-        not_found: "Địa chỉ email không tồn tại."
-        success: "Email hướng dẫn đặt lại mật khẩu đã được gửi đến địa chỉ emal mà bạn đã đăng ký. Vui lòng kiểm tra email của bạn để xem liệu bạn đã nhận được email từ chúng tôi hay chưa. Vui lòng liên hệ hỗ trợ nếu bạn không nhận được bất kỳ email nào."
-  product:
-    enums:
-      certificates:
-        home_ownership: "Sổ đỏ"
-        land_use_right: "Sổ hồng"
-        certificate: "Công chứng"
-      units:
-        deal: "Thỏa thuận"
-        million: "Triệu"
-        billion: "Tỷ"
-      statuses:
-        for_rent: "Cho thuê"
-        for_sale: "Cần Bán"
-        buy: "Cần Mua"
-  product_detail:
-    types:
-      floor: "Số tầng"
-      toilet: "Toilet"
-      livingroom: "Phòng khách"
-      kitchen: "Nhà bếp"
-      altar_room: "Phòng thờ"
-      bedroom: "Phòng ngủ"
-      built_in: "Năm xây dựng"
-  product_social:
-    types:
-      school: "Gần trường"
-      hospital: "Gần bệnh viện"
-      market: "Gần chợ"
-      supermarket: "Gần siêu thị"
-      park: "Gần công viên"
-      station: "Gần bến xe"
-      train_station: "Gần ga tàu"
-      police_station: "Gần công an"
-      kindergarten: "Gần nhà trẻ"
-      airport: "Gần sân bay"
-  product_extention:
-    types:
-      garage: "Chỗ để xe máy"
-      garage_car: "Chỗ để ô tô"
-      camera: "Hệ thống an ninh"
-      internet: "Internet"
-      tivi_cap: "Truyền hình cáp"
-      pool: "Hồ bơi"
-      fitness: Trung tâm thể dục"
-      terrace: "Sân thượng"
-      air_conditioner: "Máy điều hòa"
+        success: "Tạo mới nhà cung cấp thành công"
+        fail: "Tạo mới nhà cung cấp thất bại, vui lòng thử lại."
+      update:
+        success: "Cập nhật nhà cung cấp thành công"
+        fail: "Cập nhật nhà cung cấp thất bại, vui lòng thử lại."
+      destroy:
+        success: "Xóa thành công nhà cung cấp"
+        fail: "Xóa nhà cung cấp thất bại, vui lòng thử lại."
+    catalogs:
+      index:
+        load_data_success: "Tải danh sách các danh mục sơn && bột trét thành công"
+        title: "Quản lý danh mục sơn && bột trét"
+        list: "Danh sách danh mục sơn && bột trét"
+      show:
+        load_data_success: "Đã tìm thấy danh mục sơn && bột trét"
+        load_data_fail: "Không tìm thấy danh mục sơn && bột trét"
+      create:
+        success: "Tạo mới danh mục sơn && bột trét thành công"
+        fail: "Tạo mới danh mục sơn && bột trét thất bại, vui lòng thử lại."
+      update:
+        success: "Cập nhật danh mục sơn && bột trét thành công"
+        fail: "Cập nhật danh mục sơn && bột trét thất bại, vui lòng thử lại."
+      destroy:
+        success: "Xóa danh mục sơn && bột trét thành công"
+        fail: "Xóa danh mục sơn && bột trét thất bại, vui lòng thử lại."

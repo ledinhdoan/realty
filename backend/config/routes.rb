@@ -1,27 +1,30 @@
 Rails.application.routes.draw do
 
   mount Ckeditor::Engine => '/ckeditor'
-  devise_for :admins, controllers: {sessions: "admins/sessions",
-    passwords: "admins/passwords"}
-
-  devise_for :users, controllers: {registrations: "users/registrations",
-    sessions: "users/sessions", passwords: "users/passwords"}
+  devise_for :admins, skip: :sessions,
+    controllers: {sessions: "admins/sessions", passwords: "admins/passwords"}
 
   scope module: "admins", path: "admins", as: :admins do
     devise_scope :admin do
       get "login", to: "sessions#new"
       get "logout", to: "sessions#destroy"
-      get "forgot_password", to: "passwords#new"
+      post "sign_in", to: "sessions#create", as: :sessions
     end
     get "/dashboard", to: "dashboards#index"
-    resources :product_types
+    resources :admin_profiles, as: :profile, only: [:show, :update]
     resources :products
+    resources :roles
+    resources :providers
+    resources :catalogs
+    resources :abouts
+    resources :categories, except: [:show, :new, :edit]
+    resources :branches
   end
 
-  scope module: "homes" do
-    root "homepages#index"
-    # get ":product_type_id/:id", to: "products#show", as: "product"
-  end
+  # scope module: "homes" do
+  #   root "homepages#index"
+  #   get ":product_type_id/:id", to: "products#show", as: "product"
+  # end
 
   # scope module: "users" do
   #   devise_scope :user do
