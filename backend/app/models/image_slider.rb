@@ -1,2 +1,0 @@
-class ImageSlider < ApplicationRecord
-end
