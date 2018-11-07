@@ -1,2 +1,0 @@
-module Homes::ProductsHelper
-end
