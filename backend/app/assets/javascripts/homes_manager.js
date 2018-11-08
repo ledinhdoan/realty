@@ -18,6 +18,10 @@
 //= require constant
 //= require plugin/toastr.min.js
 //= require plugin/select2.full.min
-//= require admin/bootstrap.min.js
 //= require sweetalert
 //= require plugin/ajax_errors
+$(document).ready(function(){
+  $('#product-new-description').trumbowyg({
+    svgPath: ("/assets/homes/icons.svg")
+  });
+});
