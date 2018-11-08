@@ -25,3 +25,13 @@ $(document).ready(function(){
     svgPath: ("/assets/homes/icons.svg")
   });
 });
+$(window).scroll(function() {
+  if ($(this).scrollTop()> 0)
+  {
+    $('.topbar').fadeOut();
+  }
+  else
+  {
+    $('.topbar').fadeIn();
+  }
+});

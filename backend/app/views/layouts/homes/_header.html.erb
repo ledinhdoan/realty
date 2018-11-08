@@ -1,6 +1,6 @@
 <header class="header header--blue header--top">
   <div class="container">
-    <div class="topbar">
+    <div class="topbar" id="topbar">
       <ul class="topbar__contact">
         <li><span class="ion-ios-telephone-outline topbar__icon"></span><a href="tel:0905999999" class="topbar__link">0905-999-999</a></li>
         <li><span class="ion-ios-email-outline topbar__icon"></span><a href="mailto:neet.team.2018@gmail.com" class="topbar__link">neet.team.2018@gmail.com</a></li>
@@ -87,6 +87,7 @@
         </ul>
       </div>
       <!-- .header__menu -->
+      <%= link_to "+ Đăng tin", new_product_path, class: "header__cta" %>
       <%= link_to "+ Đăng tin", new_product_path, class: "header__cta" %>
     </div>
     <!-- .header__main -->

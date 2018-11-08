@@ -37,6 +37,7 @@ Rails.application.routes.draw do
     put "thay-doi-thong-tin", to: "profiles#update", as: "update_profile"
     get "dang-tin", to: "products#new", as: "new_product"
     get "quan-ly-tin-rao", to: "products#index", as: "products"
+    get "san-pham", to: "products#show", as: "show_product"
     resources :products, only: [] do
       collection do
         get "load_data"
