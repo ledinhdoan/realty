@@ -1224,9 +1224,9 @@ textarea {
   background-color: rgba(0, 23, 71, 0.85);
 }
 .header--top {
-  position: absolute;
+  position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 9999;
   width: 100%;
 }
 .header__main {

@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  namespace :homes do
+    get 'products/new'
+  end
+
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :admins, skip: :sessions,
     controllers: {sessions: "admins/sessions", passwords: "admins/passwords"}
@@ -32,7 +36,7 @@ Rails.application.routes.draw do
     get "trang-ca-nhan", to: "dashboards#index", as: "dashboard"
     get "thay-doi-thong-tin", to: "profiles#show", as: "show_profile"
     put "thay-doi-thong-tin", to: "profiles#update", as: "update_profile"
-    get "tao-moi-tin-rao", to: "products#new", as: "new_product"
+    get "dang-tin", to: "products#new", as: "new_product"
     get "quan-ly-tin-rao", to: "products#index", as: "products"
     resources :products do
       collection do
