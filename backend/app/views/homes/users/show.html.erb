@@ -1,0 +1,49 @@
+<section class="my-profile">
+  <div class="container">
+    <%= render "layouts/homes/breadcrumbs" %>
+    <!-- .ht-breadcrumb -->
+    <div class="my-profile__container">
+      <div class="row">
+        <%= render "layouts/homes/profile_sidebar" %>
+        <!-- .col -->
+        <form action="my_profile.html">
+          <div class="col-md-4">
+            <label for="profile-first-name" class="my-profile__label">First Name</label>
+            <input type="text" value="FelixDG" class="my-profile__field" id="profile-first-name">
+            <label for="profile-last-name" class="my-profile__label">Last Name</label>
+            <input type="text" value="Haintheme" class="my-profile__field" id="profile-last-name">
+            <label for="profile-title" class="my-profile__label">Agent Title</label>
+            <input type="text" value="Haintheme" class="my-profile__field" id="profile-title">
+            <label for="profile-number" class="my-profile__label">Phone Number</label>
+            <input type="text" value="(222) 123-456" class="my-profile__field" id="profile-number">
+            <label for="profile-email" class="my-profile__label">Email</label>
+            <input type="email" value="haintheme@domain.com" class="my-profile__field" id="profile-email">
+            <label for="profile-twitter" class="my-profile__label">Twitter Address</label>
+            <input type="text" value="https://www.twitter.com/@haintheme" class="my-profile__field" id="profile-twitter">
+            <label for="profile-facebook" class="my-profile__label">Facebook Address</label>
+            <input type="text" value="https://www.facebook.com/haintheme" class="my-profile__field" id="profile-facebook">
+            <label for="profile-linkedin" class="my-profile__label">Linkedin Address</label>
+            <input type="text" value="https://www.linkedin.com/haintheme" class="my-profile__field" id="profile-linkedin">
+          </div>
+          <!-- .col -->
+          <div class="col-md-5">
+            <label for="profile-introduce" class="my-profile__label">About Me</label>
+            <textarea id="profile-introduce" rows="20" class="my-profile__field">FelixDG is a handsome boy!</textarea>
+            <label for="profile-avatar" class="my-profile__label">Avatar</label>
+            <div class="my-profile__wrapper">
+              <input type="file">
+              <span><i class="ion-image"></i> Upload Avatar</span>
+            </div>
+            <button type="submit" class="my-profile__submit">Save Changes</button>
+          </div>
+          <!-- .col -->
+        </form>
+      </div>
+      <!-- .row -->
+    </div>
+    <!-- .my-profile__container -->
+  </div>
+  <!-- .container -->
+</section>
+<!-- .my-profile -->
+<%= render "layouts/homes/newletter" %>

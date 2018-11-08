@@ -366,7 +366,6 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   bootstrap-kaminari-views
-  byebug
   capistrano
   capistrano-bundler
   capistrano-rails

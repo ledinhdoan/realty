@@ -1,0 +1,58 @@
+<div class="col-md-3">
+  <h2 class="bookmarked-listing__headline">Xin chào, <strong>LinhKa!</strong></h2>
+  <div class="settings-block">
+    <span class="settings-block__title">Quản lý tài khoản</span>
+    <ul class="settings">
+      <li class="setting <%= 'setting--current' if request.path_info == dashboard_path %>">
+        <a href="<%= dashboard_path %>" class="setting__link">
+          <i class="ion-ios-person-outline setting__icon"></i>Trang cá nhân
+        </a>
+      </li>
+      <li class="setting">
+        <a href="bookmarked_listing.html" class="setting__link">
+          <i class="ion-ios-heart-outline setting__icon"></i>Tin quan tâm
+        </a>
+      </li>
+    </ul>
+    <!-- settings -->
+  </div>
+  <!-- .settings-block -->
+  <div class="settings-block">
+    <span class="settings-block__title">Quản lý tin rao</span>
+    <ul class="settings">
+      <li class="setting <%= 'setting--current' if request.path_info == products_path %>">
+        <a href="<%= products_path %>" class="setting__link">
+          <i class="ion-ios-home-outline setting__icon"></i>Tin đã đăng
+        </a>
+      </li>
+      <li class="setting <%= 'setting--current' if request.path_info == new_product_path %>">
+        <a href="<%= new_product_path %>" class="setting__link">
+          <i class="ion-ios-upload-outline setting__icon"></i>Tạo mới tin rao
+        </a>
+      </li>
+      <li class="setting">
+        <a href="package.html" class="setting__link">
+          <i class="ion-ios-cart-outline setting__icon"></i>Nâng cấp gói tin
+        </a>
+      </li>
+    </ul>
+    <!-- settings -->
+  </div>
+  <!-- .settings-block -->
+  <div class="settings-block">
+    <ul class="settings">
+      <li class="setting">
+        <a href="change_password.html" class="setting__link">
+          <i class="ion-ios-unlocked-outline setting__icon"></i>Đổi mật khẩu
+        </a>
+      </li>
+      <li class="setting">
+        <a href="index.html" class="setting__link">
+          <i class="ion-ios-undo-outline setting__icon"></i>Đăng xuất
+        </a>
+      </li>
+    </ul>
+    <!-- settings -->
+  </div>
+  <!-- .settings-block -->
+</div>
