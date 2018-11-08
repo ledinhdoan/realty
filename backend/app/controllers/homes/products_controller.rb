@@ -4,4 +4,8 @@ class Homes::ProductsController < Homes::HomesController
 
   def index
   end
+
+  def show
+
+  end
 end
